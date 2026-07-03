@@ -102,6 +102,8 @@ h2{
 .arte{ border-top:8px solid #e91e63; }/* Arte */
 .ingles{ border-top:8px solid #2962ff; } /* Azul Inglês */
 .tecnologia{ border-top:8px solid #00c6ff; }  /* Tecnologia */
+.professor{ border-top:8px solid #8e44ad; /* Espaço do Professor */
+}
  
 
 /* =======================================================
@@ -163,8 +165,10 @@ body.arte header{ background:#e91e63; color:white; }
 body.ingles header{ background:#2962ff; color:white; }
 body.tecnologia header{
     background:linear-gradient(135deg,#00c6ff,#7ee8fa);
-    color:#003344;
-}
+    color:#003344; }
+body.professor header{
+    background:#8e44ad;
+    color:white; }
 
 
 /* ---------- COR DOS BOTÕES INTERNOS ---------- */
@@ -247,6 +251,14 @@ body.tecnologia .links a{
 
 body.tecnologia .links a:hover{ 
     background:#0093c4; 
+}
+
+body.professor .links a{
+    background:#8e44ad;
+}
+
+body.professor .links a:hover{
+    background:#6a1b9a;
 }
 
 /* =======================================================
