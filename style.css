@@ -1,443 +1,276 @@
 /* =======================================================
-   RESET GERAL
-   Remove margens padrão e define fonte principal
+   DESIGN SYSTEM (VARIÁVEIS)
 ======================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Fredoka', sans-serif;
-}
+:root {
+    --portugues: #58cc02;
+    --matematica: #ff9800;
+    --geografia: #03a9f4;
+    --ciencias: #9c27b0;
+    --historia: #f44336;
+    --arte: #e91e63;
+    --ingles: #2962ff;
+    --tecnologia: #00c6ff;
+    --professor: #8e44ad;
 
-body{
-    background:#f4f7fb;
-}
-
-
-/* =======================================================
-   HEADER (TOPO DA PÁGINA)
-======================================================= */
-
-header{
-    background:#58cc02; /* verde Duolingo */
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
-}
-
-header h1{
-    font-size:3rem;
-    font-weight:900;
-    letter-spacing:1px;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:1.1rem;
-    opacity:0.95;
-}
-
-
-/* =======================================================
-   SEÇÕES GERAIS
-======================================================= */
-
-section{
-    padding:40px 8%;
-    background:white;
-    border-radius:30px;
-    margin:40px auto;
-}
-
-h2{
-    margin-bottom:30px;
-    text-align:center;
-    color:#333;
-}
-
-
-/* =======================================================
-   GRID DAS DISCIPLINAS (PÁGINA INICIAL)
-======================================================= */
-
-.disciplinas{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-bottom:40px;
-}
-
-.botao{
-    display:block;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-    cursor:pointer;
-    transition:0.3s;
-    box-shadow:0 6px 15px rgba(0,0,0,0.08);
-    font-size:1.2rem;
-    font-weight:600;
-    text-decoration:none;
-    color:#333;
-}
-
-.botao:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 25px rgba(0,0,0,0.15);
-}
-
-
-/* =======================================================
-   FAIXA COLORIDA SUPERIOR DOS BOTÕES (PÁGINA INICIAL)
-======================================================= */
-
-.portugues{ border-top:8px solid #58cc02; }/*  Português */
-.matematica{ border-top:8px solid #ff9800; }/* Matemática */
-.geografia{ border-top:8px solid #03a9f4; }/*  Geografia */
-.ciencias{ border-top:8px solid #9c27b0; }/*  Ciências */
-.historia{ border-top:8px solid #f44336; }/*  História */
-.arte{ border-top:8px solid #e91e63; }/* Arte */
-.ingles{ border-top:8px solid #2962ff; } /* Azul Inglês */
-.tecnologia{ border-top:8px solid #00c6ff; }  /* Tecnologia */
-.professor{ border-top:8px solid #8e44ad; /* Espaço do Professor */
-}
- 
-
-/* =======================================================
-   LINKS INTERNOS DAS DISCIPLINAS
-======================================================= */
-
-.links{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-.links a{
-    background:#00c6ff;
-    padding:10px 14px;
-    border-radius:15px;
-    text-decoration:none;
-    transition:0.3s;
-    display:block;
-}
-
-
-.links a small{
-    font-weight:400;
-    font-size:0.8rem;
-    display:block;
-}
-
-
-.titulo-link{
-    display:block;
-    font-weight:700;
-    font-size:0.95rem;
-    margin-bottom:3px;
-    color:#003c8f;
-}
-
-.descricao-link{
-    display:block;
-    font-size:0.75rem;
-    opacity:0.9;
-    color:white;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg: #f4f7fb;
+    --card-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
 /* =======================================================
-   CORES AUTOMÁTICAS POR DISCIPLINA
-   (funciona com <body class="nome-da-disciplina">)
+   RESET
 ======================================================= */
 
-
-/* ---------- COR DO HEADER ---------- */
-
-body.portugues header{ background:#58cc02; color:white; }
-body.matematica header{ background:#ff9800; color:white; }
-body.geografia header{ background:#03a9f4; color:white; }
-body.ciencias header{ background:#9c27b0; color:white; }
-body.historia header{ background:#f44336; color:white; }
-body.arte header{ background:#e91e63; color:white; }
-body.ingles header{ background:#2962ff; color:white; }
-body.tecnologia header{
-    background:linear-gradient(135deg,#00c6ff,#7ee8fa);
-    color:#003344; }
-body.professor header{
-    background:#8e44ad;
-    color:white; }
-
-
-/* ---------- COR DOS BOTÕES INTERNOS ---------- */
-
-/* =======================================================
-   CORES POR SEÇÃO (DENTRO DA MATEMÁTICA)
-======================================================= */
-
-/* JOGOS E ATIVIDADES */
-body.matematica .categoria.jogos {
-    border-top: 8px solid #ff9800;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
 }
 
-body.matematica .categoria.jogos .links a {
-    background: #ff9800;
-}
-
-body.matematica .categoria.jogos .links a:hover {
-    background: #e68900;
-}
-
-
-/* TABUADA */
-body.matematica .categoria.tabuada {
-    border-top: 8px solid #4caf50;
-}
-
-body.matematica .categoria.tabuada .links a {
-    background: #4caf50;
-}
-
-body.matematica .categoria.tabuada .links a:hover {
-    background: #3d8b40;
-}
-
-
-/* SEQUÊNCIA NUMÉRICA */
-body.matematica .categoria.sequencia {
-    border-top: 8px solid #2196f3;
-}
-
-body.matematica .categoria.sequencia .links a {
-    background: #2196f3;
-}
-
-body.matematica .categoria.sequencia .links a:hover {
-    background: #1976d2;
-}
-
-
-/* TÍTULOS COLORIDOS (opcional, mas recomendado) */
-body.matematica .categoria.jogos h3 { color: #ff9800; }
-body.matematica .categoria.tabuada h3 { color: #4caf50; }
-body.matematica .categoria.sequencia h3 { color: #2196f3; }
-
-body.portugues .links a{ background:#58cc02; }
-body.portugues .links a:hover{ background:#46a302; }
-
-body.matematica .links a{ background:#ff9800; }
-body.matematica .links a:hover{ background:#e68900; }
-
-body.geografia .links a{ background:#03a9f4; }
-body.geografia .links a:hover{ background:#0288d1; }
-
-body.ciencias .links a{ background:#9c27b0; }
-body.ciencias .links a:hover{ background:#7b1fa2; }
-
-body.historia .links a{ background:#f44336; }
-body.historia .links a:hover{ background:#d32f2f; }
-
-body.arte .links a{ background:#e91e63; }
-body.arte .links a:hover{ background:#c2185b; }
-
-body.ingles .links a{ background:#2962ff; }
-body.ingles .links a:hover{ background:#0039cb; }
-
-body.tecnologia .links a{ 
-    background:#00c6ff; 
-}
-
-body.tecnologia .links a:hover{ 
-    background:#0093c4; 
-}
-
-body.professor .links a{
-    background:#8e44ad;
-}
-
-body.professor .links a:hover{
-    background:#6a1b9a;
+body {
+    background: var(--bg);
 }
 
 /* =======================================================
-   FERRAMENTAS INTERATIVAS (CARDS)
+   HEADER
 ======================================================= */
 
-.ferramentas{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    margin-top:30px;
-    margin-bottom:70px;
-    flex-wrap:wrap;
+header {
+    color: var(--text-light);
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.3rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* cores dinâmicas do header */
+body.portugues header { background: var(--portugues); }
+body.matematica header { background: var(--matematica); }
+body.geografia header { background: var(--geografia); }
+body.ciencias header { background: var(--ciencias); }
+body.historia header { background: var(--historia); }
+body.arte header { background: var(--arte); }
+body.ingles header { background: var(--ingles); }
+body.tecnologia header {
+    background: linear-gradient(135deg, var(--tecnologia), #7ee8fa);
+    color: #003344;
+}
+body.professor header { background: var(--professor); }
+
+/* =======================================================
+   INTRO SEO
+======================================================= */
+
+.intro-seo {
+    max-width: 850px;
+    margin: 30px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
 }
 
 /* =======================================================
-   CARD MODERNO (combinando os dois estilos)
+   SEÇÕES
 ======================================================= */
+
+section {
+    padding: 40px 8%;
+    background: #fff;
+    border-radius: 30px;
+    margin: 40px auto;
+}
+
+h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+/* =======================================================
+   GRID DISCIPLINAS
+======================================================= */
+
+.disciplinas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* BOTÃO PRINCIPAL */
+.botao {
+    display: block;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: var(--card-shadow);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.botao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* faixas coloridas */
+.portugues { border-top: 8px solid var(--portugues); }
+.matematica { border-top: 8px solid var(--matematica); }
+.geografia { border-top: 8px solid var(--geografia); }
+.ciencias { border-top: 8px solid var(--ciencias); }
+.historia { border-top: 8px solid var(--historia); }
+.arte { border-top: 8px solid var(--arte); }
+.ingles { border-top: 8px solid var(--ingles); }
+.tecnologia { border-top: 8px solid var(--tecnologia); }
+.professor { border-top: 8px solid var(--professor); }
+
+/* =======================================================
+   LINKS
+======================================================= */
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.links a {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: .3s;
+}
+
+/* =======================================================
+   CORES DOS LINKS POR MATÉRIA (SIMPLIFICADO)
+======================================================= */
+
+body.portugues .links a { background: var(--portugues); }
+body.matematica .links a { background: var(--matematica); }
+body.geografia .links a { background: var(--geografia); }
+body.ciencias .links a { background: var(--ciencias); }
+body.historia .links a { background: var(--historia); }
+body.arte .links a { background: var(--arte); }
+body.ingles .links a { background: var(--ingles); }
+body.tecnologia .links a { background: var(--tecnologia); }
+body.professor .links a { background: var(--professor); }
+
+/* hover global */
+.links a:hover {
+    filter: brightness(0.85);
+}
+
+/* =======================================================
+   CATEGORIAS (MATEMÁTICA EXEMPLO)
+======================================================= */
+
+body.matematica .categoria {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    margin-bottom: 30px;
+}
+
+/* cores internas */
+body.matematica .categoria.jogos { border-top: 8px solid var(--matematica); }
+body.matematica .categoria.tabuada { border-top: 8px solid #4caf50; }
+body.matematica .categoria.sequencia { border-top: 8px solid #2196f3; }
+
+/* =======================================================
+   CARDS
+======================================================= */
+
+.ferramentas,
+.recursos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 40px 0 70px;
+}
+
 .card {
-    background: rgba(255, 255, 255, 0.08); /* fundo semi-transparente */
-    backdrop-filter: blur(10px);          /* desfoque do fundo atrás do card */
-    border-radius: 25px;                  /* cantos arredondados */
-    padding: 30px;                         /* espaço interno do card */
-    text-align: center;                     /* centraliza texto e conteúdo */
-    transition: 0.3s;                       /* animação suave em hover */
-    border: 1px solid rgba(255,255,255,0.1); /* borda leve transparente */
-    display: flex;                          /* flexbox para organizar conteúdo verticalmente */
-    flex-direction: column;                 /* itens do card em coluna */
-    align-items: center;                    /* centraliza horizontalmente os itens */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.06); /* sombra sutil para profundidade */
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--card-shadow);
 }
 
-/* =======================================================
-   EFEITO HOVER DO CARD
-======================================================= */
 .card:hover {
-    transform: translateY(-10px) scale(1.02); /* levanta e aumenta levemente */
-    background: rgba(255,255,255,0.15);       /* aumenta opacidade do fundo ao passar o mouse */
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255,255,255,0.15);
 }
 
-/* =======================================================
-   ÍCONE DO CARD (usando <span>)
-======================================================= */
-.card span { 
-    font-size: 3rem;    /* tamanho grande do ícone */
-    display: block;     /* transforma em bloco para ocupar linha inteira */
-    margin-bottom: 15px; /* espaço entre ícone e título */
+.card span {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-/* =======================================================
-   IMAGENS DENTRO DO CARD (opcional, se houver <img>)
-======================================================= */
-.card img {
-    width: 100px;       /* largura fixa da imagem */
-    margin-bottom: 15px; /* espaço entre imagem e título */
-}
-
-/* =======================================================
-   TÍTULO DO CARD (<h3>)
-======================================================= */
 .card h3 {
-    margin-bottom: 10px; /* espaço entre título e links */
-    font-size: 1.2rem;   /* tamanho do texto do título */
-    font-weight: 600;    /* negrito leve para destaque */
-}
-
-
-
-
-/* =======================================================
-   RECURSOS EDUCACIONAIS DIGITAIS (REDs)
-   Mantém o mesmo padrão visual
-======================================================= */
-
-.recursos{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    margin-top:40px;
-    margin-bottom:70px;
-    flex-wrap:wrap;
-}
-
-
-
-/* =======================================================
-   CARDS DE MAPAS (VERSÃO OTIMIZADA)
-======================================================= */
-
-.cards-mapas{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:15px;
-}
-
-/* CARD INDIVIDUAL */
-.card-mapa{
-    background:#fff;
-    padding:15px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    width:300px;
-    text-align:center;
-    transition:0.3s;
-}
-
-.card-mapa:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.18);
-}
-
-/* IMAGEM DO CARD */
-.card-mapa img{
-    width:100%;
-    border-radius:10px;
-    margin-bottom:10px;
-}
-
-/* TÍTULO DO CARD */
-.card-mapa h4{
-    margin-bottom:10px;
-    color:#333;
-    font-size:1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 /* =======================================================
-   BOTÃO DE DOWNLOAD (ESTILO MODERNO)
+   MAPAS
 ======================================================= */
 
-.botao-download{
-    display:inline-block;
-    margin-top:10px;
-    padding:12px 18px;
-    background:linear-gradient(135deg,#03a9f4,#0288d1);
-    color:#fff;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-    box-shadow:0 5px 15px rgba(3,169,244,0.3);
+.cards-mapas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.botao-download:hover{
-    transform:scale(1.05);
-    background:linear-gradient(135deg,#0288d1,#01579b);
+.card-mapa {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
 }
 
-
-/* =======================================================
-   FOOTER
-======================================================= */
-
-footer{
-    text-align:center;
-    padding:30px;
-    color:#666;
+.card-mapa:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
 }
 
-
-
-/* =======================================================
-   AJUSTES PARA CELULAR
-======================================================= */
-
-@media (max-width:600px){
-
-    header h1{
-        font-size:2rem;
-    }
-
-    section{
-        padding:30px 5%;
-    }
-
-    .botao{
-        padding:20px;
-        font-size:1rem;
-    }
-
+.card-mapa img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
+
+/*
