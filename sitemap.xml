@@ -3,47 +3,47 @@
 
   <!-- Página Inicial -->
   <url>
-    <loc>https://github.io</loc>
+    <loc>https://hrjlaboratorio-collab.github.io/Trilha-do-saber/</loc>
     <priority>1.00</priority>
   </url>
 
   <!-- Espaço do Professor -->
   <url>
-    <loc>https://github.ioprofessor.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.80</priority>
   </url>
 
   <!-- Disciplinas -->
   <url>
-    <loc>https://github.ioportugues.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://github.ioingles.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://github.iomatematica.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://github.iogeografia.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://github.iociencias.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://github.iohistoria.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://github.ioarte.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://github.iotecnologia.html</loc>
+    <loc>https://github.io</loc>
     <priority>0.70</priority>
   </url>
 
