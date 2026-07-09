@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Caminho para o mapa do seu site (substitua pelo seu domínio real quando publicar)
-Sitemap:https://hrjlaboratorio-collab.github.io/Trilha-do-saber/
+Sitemap: https://lab-tec-edu.github.io/Trilha-do-saber/sitemap.xml
