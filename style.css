@@ -187,48 +187,35 @@ body.professor .links a { background: var(--professor); }
    Somente a página de Matemática será alterada
 ======================================================= */
 
-/* Organiza as categorias em colunas */
+/* Organiza as categorias em 3 colunas */
 body.matematica {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    gap: 30px;
     padding: 40px;
-    align-items: start;
 }
 
-/* Título da página ocupa toda a largura */
+/* Título da página */
 body.matematica > h1 {
-    grid-column: 1 / -1;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
-/* Cada categoria vira uma coluna */
+/* Área das categorias */
 body.matematica .categoria {
     background: #fff;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    margin: 0;
+    margin-bottom: 30px;
     width: 100%;
 }
 
-/* Título da categoria */
-body.matematica .categoria h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 20px;
-}
-
-/* BOTÕES DA MATEMÁTICA UM ABAIXO DO OUTRO */
+/* BOTÕES UM ABAIXO DO OUTRO */
 body.matematica .categoria .links {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Botões ocupam toda a largura da coluna */
+/* Botões ocupam toda a largura */
 body.matematica .categoria .links a {
     display: block;
     width: 100%;
@@ -237,33 +224,49 @@ body.matematica .categoria .links a {
     text-align: center;
 }
 
-/* Cores das categorias */
-body.matematica .categoria.jogos {
+/* Título das categorias */
+body.matematica .categoria h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+}
+
+/* Borda superior das categorias */
+body.matematica .categoria {
     border-top: 8px solid var(--matematica);
 }
 
-body.matematica .categoria.tabuada {
-    border-top: 8px solid #4caf50;
-}
-
-body.matematica .categoria.sequencia {
-    border-top: 8px solid #2196f3;
-}
-
-/* Efeito ao passar o mouse */
+/* Efeito dos botões */
 body.matematica .categoria .links a:hover {
     filter: brightness(0.85);
     transform: translateY(-2px);
 }
 
-/* Botão voltar */
+/* =======================================================
+   ORGANIZAÇÃO DAS CATEGORIAS EM COLUNAS
+======================================================= */
+
+body.matematica {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+/* Título ocupa as 3 colunas */
+body.matematica > h1 {
+    grid-column: 1 / -1;
+}
+
+/* Botão voltar ocupa as 3 colunas */
 body.matematica .voltar {
     grid-column: 1 / -1;
     justify-self: center;
 }
 
 /* =======================================================
-   MATEMÁTICA - TABLET
+   TABLET
 ======================================================= */
 
 @media (max-width: 1000px) {
@@ -273,7 +276,7 @@ body.matematica .voltar {
 }
 
 /* =======================================================
-   MATEMÁTICA - CELULAR
+   CELULAR
 ======================================================= */
 
 @media (max-width: 650px) {
