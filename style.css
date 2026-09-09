@@ -289,181 +289,150 @@ body.professor .links a {
    CATEGORIAS EM COLUNAS
 ======================================================= */
 
-/*
-   IMPORTANTE:
-   Estas regras começam com body.matematica,
-   portanto NÃO alteram as outras disciplinas.
-*/
-
 body.matematica {
+    background: #f4f7fb;
     padding: 40px;
-
-    /* Flexbox para organizar as categorias */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-
-    align-items: flex-start;
-
-    border-top: none;
 }
 
-
-/* =======================================================
-   TÍTULO MATEMÁTICA
-======================================================= */
-
+/* TÍTULO */
 body.matematica > h1 {
-    width: 100%;
-
     text-align: center;
-
-    margin-bottom: 10px;
-
     color: #000;
+    margin-bottom: 40px;
 }
 
-
 /* =======================================================
-   CATEGORIAS DA MATEMÁTICA
-   3 COLUNAS
+   CATEGORIAS
 ======================================================= */
 
 body.matematica .categoria {
-    flex: 1 1 calc(33.333% - 20px);
+    display: inline-block;
+    vertical-align: top;
 
-    min-width: 0;
+    width: calc(33.333% - 22px);
 
-    background: #fff;
+    margin-right: 25px;
+    margin-bottom: 30px;
 
     padding: 25px;
 
+    background: #fff;
+
     border-radius: 20px;
 
-    border-top: 8px solid var(--matematica);
+    border-top: 8px solid #ff9800;
 
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-
-    margin: 0;
 
     text-align: left;
 }
 
+/* Última coluna sem margem */
+body.matematica .categoria:nth-of-type(3) {
+    margin-right: 0;
+}
 
 /* =======================================================
    TÍTULO DAS CATEGORIAS
 ======================================================= */
 
 body.matematica .categoria h3 {
-    margin-bottom: 20px;
-
     text-align: center;
-
+    margin-bottom: 20px;
     color: #333;
-
     font-size: 20px;
 }
 
-
 /* =======================================================
-   BOTÕES DA MATEMÁTICA
+   BOTÕES
    UM ABAIXO DO OUTRO
 ======================================================= */
 
 body.matematica .categoria .links {
     display: flex;
-
     flex-direction: column;
-
     gap: 10px;
 }
 
-
-/* =======================================================
-   BOTÕES DA MATEMÁTICA
-======================================================= */
-
+/* Cada botão ocupa toda a coluna */
 body.matematica .categoria .links a {
     display: block;
-
     width: 100%;
 
     padding: 12px 15px;
 
     border-radius: 15px;
 
-    text-align: center;
-
-    text-decoration: none;
-
+    background: #ff9800;
     color: #fff;
 
+    text-decoration: none;
     font-weight: 600;
 
-    transition: .3s;
+    text-align: center;
 
-    /* Evita que textos muito grandes estourem a coluna */
-    overflow-wrap: break-word;
+    transition: 0.3s;
 }
 
-
-/* =======================================================
-   HOVER DOS BOTÕES DA MATEMÁTICA
-======================================================= */
-
+/* Efeito mouse */
 body.matematica .categoria .links a:hover {
-    filter: brightness(0.85);
-
-    transform: translateY(-2px);
+    background: #e68900;
+    transform: scale(1.02);
 }
-
 
 /* =======================================================
    BOTÃO VOLTAR
 ======================================================= */
 
 body.matematica .voltar {
-    width: 100%;
+    display: block;
+    width: fit-content;
 
-    text-align: center;
+    margin: 10px auto 0;
 
-    margin-top: 5px;
+    padding: 12px 22px;
+
+    background: #ff9800;
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    font-weight: 600;
 }
 
-
 /* =======================================================
-   MATEMÁTICA - TABLET
+   TABLET
 ======================================================= */
 
 @media (max-width: 1000px) {
 
-    body.matematica {
-        padding: 30px;
-        gap: 20px;
+    body.matematica .categoria {
+        width: calc(50% - 15px);
+        margin-right: 20px;
     }
 
-    body.matematica .categoria {
-        flex: 1 1 calc(50% - 10px);
+    body.matematica .categoria:nth-of-type(2n) {
+        margin-right: 0;
     }
 }
 
-
 /* =======================================================
-   MATEMÁTICA - CELULAR
+   CELULAR
 ======================================================= */
 
 @media (max-width: 650px) {
 
     body.matematica {
         padding: 20px;
-
-        gap: 20px;
     }
 
     body.matematica .categoria {
-        flex: 1 1 100%;
-
+        display: block;
         width: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
     }
 }
 
