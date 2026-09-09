@@ -19,6 +19,7 @@
     --card-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
+
 /* =======================================================
    RESET
 ======================================================= */
@@ -33,6 +34,7 @@
 body {
     background: var(--bg);
 }
+
 
 /* =======================================================
    HEADER
@@ -55,19 +57,48 @@ header p {
     opacity: 0.95;
 }
 
-/* cores dinâmicas do header */
-body.portugues header { background: var(--portugues); }
-body.matematica header { background: var(--matematica); }
-body.geografia header { background: var(--geografia); }
-body.ciencias header { background: var(--ciencias); }
-body.historia header { background: var(--historia); }
-body.arte header { background: var(--arte); }
-body.ingles header { background: var(--ingles); }
+
+/* =======================================================
+   CORES DINÂMICAS DO HEADER
+======================================================= */
+
+body.portugues header {
+    background: var(--portugues);
+}
+
+body.matematica header {
+    background: var(--matematica);
+}
+
+body.geografia header {
+    background: var(--geografia);
+}
+
+body.ciencias header {
+    background: var(--ciencias);
+}
+
+body.historia header {
+    background: var(--historia);
+}
+
+body.arte header {
+    background: var(--arte);
+}
+
+body.ingles header {
+    background: var(--ingles);
+}
+
 body.tecnologia header {
     background: linear-gradient(135deg, var(--tecnologia), #7ee8fa);
     color: #003344;
 }
-body.professor header { background: var(--professor); }
+
+body.professor header {
+    background: var(--professor);
+}
+
 
 /* =======================================================
    INTRO SEO
@@ -82,6 +113,7 @@ body.professor header { background: var(--professor); }
     line-height: 1.7;
     color: #555;
 }
+
 
 /* =======================================================
    SEÇÕES
@@ -100,6 +132,7 @@ h2 {
     color: var(--text-dark);
 }
 
+
 /* =======================================================
    GRID DISCIPLINAS
 ======================================================= */
@@ -111,7 +144,11 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* BOTÃO PRINCIPAL */
+
+/* =======================================================
+   BOTÃO PRINCIPAL
+======================================================= */
+
 .botao {
     display: block;
     background: #fff;
@@ -132,19 +169,52 @@ h2 {
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-/* faixas coloridas */
-.portugues { border-top: 8px solid var(--portugues); }
-.matematica { border-top: 8px solid var(--matematica); }
-.geografia { border-top: 8px solid var(--geografia); }
-.ciencias { border-top: 8px solid var(--ciencias); }
-.historia { border-top: 8px solid var(--historia); }
-.arte { border-top: 8px solid var(--arte); }
-.ingles { border-top: 8px solid var(--ingles); }
-.tecnologia { border-top: 8px solid var(--tecnologia); }
-.professor { border-top: 8px solid var(--professor); }
+
+/* =======================================================
+   FAIXAS COLORIDAS
+======================================================= */
+
+.portugues {
+    border-top: 8px solid var(--portugues);
+}
+
+/* Alterado para não afetar o body.matematica */
+.botao.matematica {
+    border-top: 8px solid var(--matematica);
+}
+
+.geografia {
+    border-top: 8px solid var(--geografia);
+}
+
+.ciencias {
+    border-top: 8px solid var(--ciencias);
+}
+
+.historia {
+    border-top: 8px solid var(--historia);
+}
+
+.arte {
+    border-top: 8px solid var(--arte);
+}
+
+.ingles {
+    border-top: 8px solid var(--ingles);
+}
+
+.tecnologia {
+    border-top: 8px solid var(--tecnologia);
+}
+
+.professor {
+    border-top: 8px solid var(--professor);
+}
+
 
 /* =======================================================
    LINKS
+   REGRA GERAL DAS OUTRAS DISCIPLINAS
 ======================================================= */
 
 .links {
@@ -163,82 +233,137 @@ h2 {
     transition: .3s;
 }
 
+
 /* =======================================================
-   CORES DOS LINKS POR MATÉRIA (SIMPLIFICADO)
+   CORES DOS LINKS POR MATÉRIA
 ======================================================= */
 
-body.portugues .links a { background: var(--portugues); }
-body.matematica .links a { background: var(--matematica); }
-body.geografia .links a { background: var(--geografia); }
-body.ciencias .links a { background: var(--ciencias); }
-body.historia .links a { background: var(--historia); }
-body.arte .links a { background: var(--arte); }
-body.ingles .links a { background: var(--ingles); }
-body.tecnologia .links a { background: var(--tecnologia); }
-body.professor .links a { background: var(--professor); }
+body.portugues .links a {
+    background: var(--portugues);
+}
 
-/* hover global */
+body.matematica .links a {
+    background: var(--matematica);
+}
+
+body.geografia .links a {
+    background: var(--geografia);
+}
+
+body.ciencias .links a {
+    background: var(--ciencias);
+}
+
+body.historia .links a {
+    background: var(--historia);
+}
+
+body.arte .links a {
+    background: var(--arte);
+}
+
+body.ingles .links a {
+    background: var(--ingles);
+}
+
+body.tecnologia .links a {
+    background: var(--tecnologia);
+}
+
+body.professor .links a {
+    background: var(--professor);
+}
+
+
+/* =======================================================
+   HOVER GLOBAL
+======================================================= */
+
 .links a:hover {
     filter: brightness(0.85);
 }
 
+
 /* =======================================================
-   CATEGORIAS - MATEMÁTICA
-   SOMENTE A PÁGINA DE MATEMÁTICA
+   MATEMÁTICA
+   CATEGORIAS EM COLUNAS
 ======================================================= */
 
-/* Espaçamento da página */
+/*
+   IMPORTANTE:
+   Estas regras começam com body.matematica,
+   portanto NÃO alteram as outras disciplinas.
+*/
+
 body.matematica {
     padding: 40px;
+
+    /* Flexbox para organizar as categorias */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    align-items: flex-start;
+
     border-top: none;
 }
 
-/* Título da Matemática */
-body.matematica h1 {
-    text-align: center;
-    margin-bottom: 40px;
-}
 
 /* =======================================================
-   CATEGORIAS EM 3 COLUNAS
+   TÍTULO MATEMÁTICA
+======================================================= */
+
+body.matematica > h1 {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+    color: #000;
+}
+
+
+/* =======================================================
+   CATEGORIAS DA MATEMÁTICA
+   3 COLUNAS
 ======================================================= */
 
 body.matematica .categoria {
-    display: inline-block;
-    vertical-align: top;
+    flex: 1 1 calc(33.333% - 20px);
 
-    width: calc(33.333% - 22px);
-
-    margin-right: 25px;
-    margin-bottom: 30px;
-
-    padding: 25px;
+    min-width: 0;
 
     background: #fff;
 
+    padding: 25px;
+
     border-radius: 20px;
+
     border-top: 8px solid var(--matematica);
 
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    margin: 0;
 
     text-align: left;
 }
 
-/* Remove o espaço da última categoria */
-body.matematica .categoria:last-of-type {
-    margin-right: 0;
-}
 
 /* =======================================================
    TÍTULO DAS CATEGORIAS
 ======================================================= */
 
 body.matematica .categoria h3 {
-    text-align: center;
     margin-bottom: 20px;
+
+    text-align: center;
+
     color: #333;
+
     font-size: 20px;
 }
+
 
 /* =======================================================
    BOTÕES DA MATEMÁTICA
@@ -247,13 +372,20 @@ body.matematica .categoria h3 {
 
 body.matematica .categoria .links {
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
 }
 
-/* Botões ocupam toda a largura */
+
+/* =======================================================
+   BOTÕES DA MATEMÁTICA
+======================================================= */
+
 body.matematica .categoria .links a {
     display: block;
+
     width: 100%;
 
     padding: 12px 15px;
@@ -261,58 +393,80 @@ body.matematica .categoria .links a {
     border-radius: 15px;
 
     text-align: center;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+    /* Evita que textos muito grandes estourem a coluna */
+    overflow-wrap: break-word;
 }
 
-/* Efeito ao passar o mouse */
+
+/* =======================================================
+   HOVER DOS BOTÕES DA MATEMÁTICA
+======================================================= */
+
 body.matematica .categoria .links a:hover {
     filter: brightness(0.85);
+
     transform: translateY(-2px);
 }
+
 
 /* =======================================================
    BOTÃO VOLTAR
 ======================================================= */
 
 body.matematica .voltar {
-    display: block;
-    clear: both;
-    width: fit-content;
-    margin: 10px auto 0;
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 5px;
 }
 
+
 /* =======================================================
-   TABLET
+   MATEMÁTICA - TABLET
 ======================================================= */
 
 @media (max-width: 1000px) {
 
-    body.matematica .categoria {
-        width: calc(50% - 15px);
-        margin-right: 20px;
+    body.matematica {
+        padding: 30px;
+        gap: 20px;
     }
 
-    body.matematica .categoria:nth-of-type(2n) {
-        margin-right: 0;
+    body.matematica .categoria {
+        flex: 1 1 calc(50% - 10px);
     }
 }
 
+
 /* =======================================================
-   CELULAR
+   MATEMÁTICA - CELULAR
 ======================================================= */
 
 @media (max-width: 650px) {
 
     body.matematica {
         padding: 20px;
+
+        gap: 20px;
     }
 
     body.matematica .categoria {
-        display: block;
+        flex: 1 1 100%;
+
         width: 100%;
-        margin-right: 0;
-        margin-bottom: 25px;
     }
 }
+
 
 /* =======================================================
    CARDS
@@ -330,11 +484,17 @@ body.matematica .voltar {
 .card {
     width: 280px;
     min-height: 220px;
+
     background: #fff;
+
     border-radius: 20px;
+
     padding: 20px;
+
     text-align: center;
+
     box-shadow: var(--card-shadow);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -355,11 +515,12 @@ body.matematica .voltar {
     margin-bottom: 10px;
 }
 
-.card img{
+.card img {
     width: 90px !important;
     height: 90px !important;
     object-fit: contain;
 }
+
 
 /* =======================================================
    MAPAS
@@ -374,23 +535,30 @@ body.matematica .voltar {
 
 .card-mapa {
     background: #fff;
+
     padding: 15px;
+
     border-radius: 15px;
+
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
     width: 300px;
+
     text-align: center;
+
     transition: 0.3s;
 }
 
 .card-mapa:hover {
     transform: translateY(-8px);
+
     box-shadow: 0 15px 30px rgba(0,0,0,0.18);
 }
 
 .card-mapa img {
     width: 100%;
+
     border-radius: 10px;
+
     margin-bottom: 10px;
 }
-
-
