@@ -190,6 +190,7 @@ body.professor .links a { background: var(--professor); }
 /* Área da página de matemática */
 body.matematica {
     padding: 40px;
+     border-top: none;
 }
 
 /* Título */
