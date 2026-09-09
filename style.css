@@ -184,85 +184,86 @@ body.professor .links a { background: var(--professor); }
 
 /* =======================================================
    CATEGORIAS - MATEMÁTICA
-   Somente a página de Matemática será alterada
+   SOMENTE MATEMÁTICA
 ======================================================= */
 
-/* Organiza as categorias em 3 colunas */
+/* Área da página de matemática */
 body.matematica {
     padding: 40px;
 }
 
-/* Título da página */
+/* Título */
 body.matematica > h1 {
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* Área das categorias */
-body.matematica .categoria {
+/* CADA CATEGORIA = UMA COLUNA */
+body.matematica > .categoria {
+    width: calc(33.333% - 20px);
+    float: left;
+
     background: #fff;
     padding: 25px;
+
     border-radius: 20px;
+    border-top: 8px solid var(--matematica);
+
     box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    margin-bottom: 30px;
-    width: 100%;
+
+    margin: 0 30px 30px 0;
 }
 
-/* BOTÕES UM ABAIXO DO OUTRO */
-body.matematica .categoria .links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Remove a margem da terceira coluna */
+body.matematica > .categoria:nth-of-type(4) {
+    margin-right: 0;
 }
 
-/* Botões ocupam toda a largura */
-body.matematica .categoria .links a {
-    display: block;
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-/* Título das categorias */
-body.matematica .categoria h3 {
+/* TÍTULO DA CATEGORIA */
+body.matematica > .categoria h3 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
     font-size: 20px;
 }
 
-/* Borda superior das categorias */
-body.matematica .categoria {
-    border-top: 8px solid var(--matematica);
+/* =======================================================
+   BOTÕES UM ABAIXO DO OUTRO
+======================================================= */
+
+body.matematica > .categoria .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Efeito dos botões */
-body.matematica .categoria .links a:hover {
+/* BOTÃO */
+body.matematica > .categoria .links a {
+    display: block;
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+/* EFEITO */
+body.matematica > .categoria .links a:hover {
     filter: brightness(0.85);
     transform: translateY(-2px);
 }
 
 /* =======================================================
-   ORGANIZAÇÃO DAS CATEGORIAS EM COLUNAS
+   BOTÃO VOLTAR
 ======================================================= */
 
-body.matematica {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    gap: 30px;
-    align-items: start;
-}
-
-/* Título ocupa as 3 colunas */
-body.matematica > h1 {
-    grid-column: 1 / -1;
-}
-
-/* Botão voltar ocupa as 3 colunas */
-body.matematica .voltar {
-    grid-column: 1 / -1;
-    justify-self: center;
+body.matematica > .voltar {
+    clear: both;
+    display: block;
+    width: fit-content;
+    margin: 10px auto 0;
 }
 
 /* =======================================================
@@ -270,8 +271,17 @@ body.matematica .voltar {
 ======================================================= */
 
 @media (max-width: 1000px) {
-    body.matematica {
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
+
+    body.matematica > .categoria {
+        width: calc(50% - 15px);
+    }
+
+    body.matematica > .categoria:nth-of-type(4) {
+        margin-right: 30px;
+    }
+
+    body.matematica > .categoria:nth-of-type(3) {
+        margin-right: 0;
     }
 }
 
@@ -280,9 +290,15 @@ body.matematica .voltar {
 ======================================================= */
 
 @media (max-width: 650px) {
+
     body.matematica {
-        grid-template-columns: 1fr;
         padding: 20px;
+    }
+
+    body.matematica > .categoria {
+        width: 100%;
+        float: none;
+        margin: 0 0 25px 0;
     }
 }
 
