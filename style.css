@@ -183,21 +183,105 @@ body.professor .links a { background: var(--professor); }
 }
 
 /* =======================================================
-   CATEGORIAS (MATEMÁTICA EXEMPLO)
+   CATEGORIAS - MATEMÁTICA
+   Somente a página de Matemática será alterada
 ======================================================= */
 
-body.matematica .categoria {
-    background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    margin-bottom: 30px;
+/* Organiza as categorias em colunas */
+body.matematica {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    align-items: start;
 }
 
-/* cores internas */
-body.matematica .categoria.jogos { border-top: 8px solid var(--matematica); }
-body.matematica .categoria.tabuada { border-top: 8px solid #4caf50; }
-body.matematica .categoria.sequencia { border-top: 8px solid #2196f3; }
+/* Título da página ocupa toda a largura */
+body.matematica > h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Cada categoria vira uma coluna */
+body.matematica .categoria {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    margin: 0;
+    width: 100%;
+}
+
+/* Título da categoria */
+body.matematica .categoria h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+}
+
+/* BOTÕES DA MATEMÁTICA UM ABAIXO DO OUTRO */
+body.matematica .categoria .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botões ocupam toda a largura da coluna */
+body.matematica .categoria .links a {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Cores das categorias */
+body.matematica .categoria.jogos {
+    border-top: 8px solid var(--matematica);
+}
+
+body.matematica .categoria.tabuada {
+    border-top: 8px solid #4caf50;
+}
+
+body.matematica .categoria.sequencia {
+    border-top: 8px solid #2196f3;
+}
+
+/* Efeito ao passar o mouse */
+body.matematica .categoria .links a:hover {
+    filter: brightness(0.85);
+    transform: translateY(-2px);
+}
+
+/* Botão voltar */
+body.matematica .voltar {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* =======================================================
+   MATEMÁTICA - TABLET
+======================================================= */
+
+@media (max-width: 1000px) {
+    body.matematica {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+/* =======================================================
+   MATEMÁTICA - CELULAR
+======================================================= */
+
+@media (max-width: 650px) {
+    body.matematica {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
 
 /* =======================================================
    CARDS
