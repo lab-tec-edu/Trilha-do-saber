@@ -67,6 +67,36 @@ h1{
     transform:scale(1.05);
 }
 
+/* GRADE DE IMAGENS - PROFESSORA NARA */
+.grade-direta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.grade-direta a {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    background: none;
+    padding: 0;
+}
+
+.grade-direta a:hover {
+    transform: scale(1.08);
+}
+
+.grade-direta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 /* BOTÃO VOLTAR */
 .voltar{
     display:inline-block;
@@ -97,116 +127,62 @@ Materiais organizados por professores.
 
 <!-- ===================== PROFESSOR FERNANDO ===================== -->
 <div class="categoria">
-
-<h2>🧑‍🏫 Professor Fernando</h2>
-
-<div class="arquivos">
-
-<a href="arquivos/prof_fernando/portugues_atividade.pdf" target="_blank">
-📄1ºAno EM - Física - JUL/26
-</a>
-
-<a href="arquivos/prof_fernando/matematica_atividade.pdf" target="_blank">
-📄2ºAno EM - Física - JUL/26
-</a>
-
-<a href="arquivos/prof_fernando/avaliacao_5ano.pdf" target="_blank">
-📊 3ºAno EM  - FísicaJUL/26
-</a>
-
-</div>
-
-</div>
-
-<!-- ===================== PROFESSORA MARIA ===================== -->
-<div class="categoria">
-
-<h2>🧑‍🏫 Professora Julie - Inglês</h2>
-
-<div class="arquivos">
-
-<a href="arquivos/prof_maria/ciencias_atividade.pdf" target="_blank">
-📄 1ºAno EM - Avaliação - JUL/26
-</a>
-
-<a href="arquivos/prof_maria/geografia_slides.pptx" target="_blank">
-📊 2ºAno EM - Avaliação - JUL/26
-</a>
-
-<a href="arquivos/prof_maria/geografia_slides.pptx" target="_blank">
-📊 3ºAno EM - Avaliação - JUL/26
-</a>
-    
-</div>
-
-</div>
-
-<!-- ===================== PROFESSORA ANDRÉA ===================== -->
-<div class="categoria">
-
-<h2>🧑‍🏫 Professora Andréa - Tec. Ed.</h2>
-
-<div class="arquivos">
-
-  <a href="arquivos/Repara_Internet.bat" target="_blank">
-    🛠️ Baixar Repara_Internet.rar
-</a>
-
- <a href="arquivos/IA.pdf" target="_blank">
-    📄 Incorporando a Inteligência Artificial na Sala de Aula
-  </a>
-    
-</div>
-
-</div>
-
-
-<!-- ===================== PROFESSORA ANDRÉA ===================== -->
-<div class="categoria">
-
-  <h2>🧑‍🏫 Professora Meire - Artes</h2>
-
+  <h2>🧑‍🏫 Professor Fernando</h2>
   <div class="arquivos">
-
-    <a href="https://docs.google.com/document/d/1rk2oyITaHGLmJ2TDkSfhM41bczUHq-f3rkwLRNpxz8o/edit?usp=sharing" target="_blank">
-      📄 901 - Material de Artes
-    </a>
-
-    <a href="https://docs.google.com/document/d/1AIDHXO261bfkzmphn8C_JnQViJONXqBg1uUJw13YQqw/edit?usp=sharing" target="_blank">
-      📄 902 - Material de Artes
-    </a>
-
+    <a href="arquivos/prof_fernando/portugues_atividade.pdf" target="_blank">📄 1ºAno EM - Física - JUL/26</a>
+    <a href="arquivos/prof_fernando/matematica_atividade.pdf" target="_blank">📄 2ºAno EM - Física - JUL/26</a>
+    <a href="arquivos/prof_fernando/avaliacao_5ano.pdf" target="_blank">📊 3ºAno EM - Física JUL/26</a>
   </div>
-
 </div>
 
-    <!-- ===================== PROFESSORA NARA ===================== -->
+<!-- ===================== PROFESSORA JULIE ===================== -->
 <div class="categoria">
+  <h2>🧑‍🏫 Professora Julie - Inglês</h2>
+  <div class="arquivos">
+    <a href="arquivos/prof_maria/ciencias_atividade.pdf" target="_blank">📄 1ºAno EM - Avaliação - JUL/26</a>
+    <a href="arquivos/prof_maria/geografia_slides.pptx" target="_blank">📊 2ºAno EM - Avaliação - JUL/26</a>
+    <a href="arquivos/prof_maria/geografia_slides.pptx" target="_blank">📊 3ºAno EM - Avaliação - JUL/26</a>
+  </div>
+</div>
 
+<!-- ===================== PROFESSORA ANDRÉA ===================== -->
+<div class="categoria">
+  <h2>🧑‍🏫 Professora Andréa - Tec. Ed.</h2>
+  <div class="arquivos">
+    <a href="arquivos/Repara_Internet.bat" target="_blank">🛠️ Baixar Repara_Internet.rar</a>
+    <a href="arquivos/IA.pdf" target="_blank">📄 Incorporando a Inteligência Artificial na Sala de Aula</a>
+  </div>
+</div>
+
+<!-- ===================== PROFESSORA MEIRE ===================== -->
+<div class="categoria">
+  <h2>🧑‍🏫 Professora Meire - Artes</h2>
+  <div class="arquivos">
+    <a href="https://docs.google.com/document/d/1rk2oyITaHGLmJ2TDkSfhM41bczUHq-f3rkwLRNpxz8o/edit?usp=sharing" target="_blank">📄 901 - Material de Artes</a>
+    <a href="https://docs.google.com/document/d/1AIDHXO261bfkzmphn8C_JnQViJONXqBg1uUJw13YQqw/edit?usp=sharing" target="_blank">📄 902 - Material de Artes</a>
+  </div>
+</div>
+
+<!-- ===================== PROFESSORA NARA ===================== -->
+<div class="categoria">
   <h2>🧑‍🏫 Professora NARA - 401 </h2>
 
+  <!-- Documentos / Links normais -->
   <div class="arquivos">
-
-    <a href="https://docs.google.com/document/d/1OYL8S2CBXNn8Zdcu48dIJzxCOTwIWCCQ-TL2Bav-2Xs/edit?usp=sharing">
-      📄 Prompt
-    </a>
-
-    <a href="https://docs.google.com/document/d/1AIDHXO261bfkzmphn8C_JnQViJONXqBg1uUJw13YQqw/edit?usp=sharing" target="_blank">
-      📄 902 - Material de Artes
-    </a>
-
+    <a href="https://docs.google.com/document/d/1OYL8S2CBXNn8Zdcu48dIJzxCOTwIWCCQ-TL2Bav-2Xs/edit?usp=sharing" target="_blank">📄 Prompt</a>
   </div>
 
+  <!-- Grade com as 24 imagens -->
+  <div class="grade-direta">
+    <a href="arquivos/prof_nara/imagem1.jpg" download><img src="arquivos/prof_nara/imagem1.jpg" alt="Imagem 1"></a>
+    <a href="arquivos/prof_nara/imagem2.jpg" download><img src="arquivos/prof_nara/imagem2.jpg" alt="Imagem 2"></a>
+    <a href="arquivos/prof_nara/imagem3.jpg" download><img src="arquivos/prof_nara/imagem3.jpg" alt="Imagem 3"></a>
+    <!-- Repita as linhas <a> para as imagens de 4 a 24 -->
+  </div>
 </div>
 
-
-
-
-
 <!-- BOTÃO VOLTAR -->
-<a href="professor.html" class="voltar">
-⬅ Voltar
-</a>
+<a href="professor.html" class="voltar">⬅ Voltar</a>
 
 </body>
 </html>
